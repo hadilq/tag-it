@@ -45,6 +45,9 @@
             // unless overridden.
             autocomplete: {},
 
+            // delimiter
+            delimiter: null,
+
             // Shows autocomplete before the user even types anything.
             showAutocompleteOnFocus: false,
 
@@ -258,7 +261,8 @@
                                     $.trim(that.tagInput.val()).length - 1 !== 0
                                 )
                             )
-                        )
+                        ) ||
+                        even.which === that.options.delimiter
                     ) {
                         // Enter submits the form if there's no text in the input.
                         if (!(event.which === $.ui.keyCode.ENTER && that.tagInput.val() === '')) {
