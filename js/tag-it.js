@@ -262,7 +262,7 @@
                                 )
                             )
                         ) ||
-                        even.which === that.options.delimiter
+                        event.which === that.options.delimiter
                     ) {
                         // Enter submits the form if there's no text in the input.
                         if (!(event.which === $.ui.keyCode.ENTER && that.tagInput.val() === '')) {
